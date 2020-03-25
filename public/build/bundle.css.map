@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../../App.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  import Jobs from \"./Jobs.svelte\";\n  import Supplies from \"./Supplies.svelte\";\n  import SupplyChain from \"./SupplyChain.svelte\";\n  import Food from \"./Food.svelte\";\n\n  export let selectedTab = \"Jobs\";\n\n  function changeTab(tab) {\n    console.log(tab);\n    selectedTab = tab;\n  }\n</script>\n\n<style>\n  ul {\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n    background-color: #333333;\n    width: 100%;\n  }\n\n  li {\n    float: left;\n    color: white;\n    width: 25%;\n    text-align: center;\n    padding-top: 20px;\n    padding-bottom: 20px;\n    cursor: \"pointer\";\n  }\n</style>\n\n<main>\n  <div>\n    <ul>\n      <li on:click|preventDefault={() => changeTab('Jobs')}>Jobs</li>\n      <li on:click|preventDefault={() => changeTab('Supplies')}>Supplies</li>\n      <li on:click|preventDefault={() => changeTab('SupplyChain')}>\n        Supply Chain\n      </li>\n      <li on:click|preventDefault={() => changeTab('Food')}>Food</li>\n    </ul>\n  </div>\n  {#if selectedTab === 'Jobs'}\n    <Jobs />\n  {:else if selectedTab === 'Supplies'}\n    <Supplies />\n  {:else if selectedTab === 'SupplyChain'}\n    <SupplyChain />\n  {:else}\n    <Food />\n  {/if}\n</main>\n"
+  ],
+  "names": [],
+  "mappings": "AAeE,EAAE,eAAC,CAAC,AACF,eAAe,CAAE,IAAI,CACrB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,QAAQ,CAAE,MAAM,CAChB,gBAAgB,CAAE,OAAO,CACzB,KAAK,CAAE,IAAI,AACb,CAAC,AAED,EAAE,eAAC,CAAC,AACF,KAAK,CAAE,IAAI,CACX,KAAK,CAAE,KAAK,CACZ,KAAK,CAAE,GAAG,CACV,UAAU,CAAE,MAAM,CAClB,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CACpB,MAAM,CAAE,SAAS,AACnB,CAAC"
+}
