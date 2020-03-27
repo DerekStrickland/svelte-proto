@@ -1,7 +1,3 @@
-# Covid Relief Matcher in partnership with orlando.org & [hackfromhome](https://hackfromhome.ideas.aha.io/ideas/SE1-I-10)
-
-Join us on slack hackfromhome.slack.com
-
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
